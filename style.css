@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Yesteryear&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: 'Yesteryear', cursive;
+}
+
+nav{
+    top: 10vh;
+    background: #333;
+}
+
+
+nav .container{
+
+    background: url(./img/1.jpeg) no-repeat center center/cover;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    
+}
+.container h1{
+    padding-top: 3px;
+    padding-left: 30px;
+    letter-spacing: 3px;
+}
+ul{
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+a{
+    text-decoration: none;
+}
+
+ul li{
+    list-style: none;
+    display: block;
+    padding: 10px;
+    margin-right: 50px;
+    font-weight: 900;
+    letter-spacing: 3px;
+    font-size: 20px;
+    color: black;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+ul li:hover{
+    border: 1px solid cyan;
+   background-color: rgb(9, 255, 255);
+}
+
+
+
+
+.container{
+    position: absolute;
+    left: 0;
+    top: 100vh;
+    width: 100%;
+    height: 100vh;
+    background: black;
+}
+
+.container .box{
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 3s ease-in-out;
+}
+
+.container .box.box1{
+   
+    clip-path: polygon(0 0, 33% 0, 33% 100%, 0% 100%);
+}
+
+.container .box.box2{
+    
+    clip-path: polygon(66% 0, 33% 0, 33% 100%, 66% 100%);
+}
+.container .box.box3{
+   
+    clip-path: polygon(66% 0, 100% 0, 100% 100%, 66% 100%);
+}
+
+.container .content{
+    padding: 20px;
+    margin: 20px;
+    z-index: 10;
+    opacity: 0;
+    transition: 1s;
+}
+
+.container .box.active .content{
+    opacity: 1;
+    transition: 1s ease-in-out;
+}
+.container .content h2{
+    color: #fff;
+    font-size: 12vw;
+    font-weight: initial;
+}
+
+.container .box.active{
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+}
+
+.container .box:hover{
+    z-index: 1000;
+}
+
+.container .box video{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    object-fit: cover;
+}
